@@ -6,21 +6,40 @@ file_content = open('Office_Products_Modified.txt').read()
 
 
 def get_number_of_a():
-    pass  # Delete this line, then write your code for the function here.
+    total = 0
+    for letter in file_content:
+        if letter.lower() == "a":
+            total += 1
+    return total        
 
 
 def get_number_of_z():
-    pass  # Delete this line, then write your code for the function here.
+    total = 0
+    for letter in file_content:
+        if letter.lower() == "z":
+            total += 1
+    return total        
 
 
 def get_number_of_percent():
-    pass  # Delete this line, then write your code for the function here.
+    total = 0
+    for character in file_content:
+        if character == "%":
+            total += 1
+    return total        
 
 
 def get_number_of_char(user_char):
-    pass  # Delete this line, then write your code for the function here.
+    total = 0
+    for character in file_content:
+        if character.lower() == user_char.lower():
+            total += 1
+    return total        
 
 
 # Test your code below, inside the if statement
 if __name__ == "__main__":
-    pass  # Remove this line and add your own tests here
+    print("Number of A's:", get_number_of_a())
+    print("Number of Z's:", get_number_of_z())
+    print("Number of % symbols:", get_number_of_percent())
+    print("Number of E's:", get_number_of_char("e"))
